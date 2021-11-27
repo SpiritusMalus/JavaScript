@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Homework</title>
+</head>
+
+<body>
+  <!--
+Обязательное задание.
+
+Необходимо реализовать четыре функции, каждая функция должна принимать по два
+числа и выполнять одну из операций (каждая функция выполняет одну из них):
+1. Сложение
+2. Разность
+3. Умножение
+4. Деление
+
+Необходимо сделать так, чтобы функция вернула число, например выражение
+`console.log(sum(2, 6));` должно вывести число 8 в консоль (sum - функция
+сложения в данном примере, ваши названия функций могут отличаться).
+
+Округлять значения, которые возвращают функции не нужно, однако, обратите
+внимание на разность, функция должна вычесть из большего числа меньшее, либо
+вернуть 0, если числа равны.
+
+Функциям всегда передаются корректные числа, проверки на NaN, Infinity делать
+не нужно.
+
+Необходимо для всех функций прописать комментарии jsdoc https://jsdoc.app/.
+-->
+  <script>
+    "use strict";
+
+    let a = 5;
+    let b = 5;
+
+    /**
+    * 
+    * @param {number} Принимает первое число, будет складываться в функции
+    * @param {number} Принимает второе число, будет складываться в функции 
+    * @returns {number} Вернет число, получившееся в результате суммы двух чисел
+    */
+    function addingNumbers(number1, number2) {
+      return console.log(+number1 + +number2);
+    }
+    addingNumbers(a, b);
+
+    /**
+    * 
+    * @param {number} Принимает первое число, будет вычитаться в функции
+    * @param {number} Принимает второе число, будет вычитаться в функции 
+    * @returns {number} Вернет число, получившееся в результате разности  чисел
+    */
+    function differenceNumbers(number1, number2) {
+      if (number1 > number2) {
+        return console.log(+number1 - +number2);
+      }
+      if (number2 > number1) {
+        return console.log(+number2 - +number1);
+      }
+      return console.log(0);
+    }
+    differenceNumbers(a, b);
+
+    /**
+    * 
+    * @param {number} Принимает первое число, будет умножаться в функции
+    * @param {number} Принимает второе число, будет умножаться в функции 
+    * @returns {number} Вернет число, получившееся в результате умножения чисел
+    */
+    function mulNumbers(number1, number2) {
+      return console.log(+number1 * +number2);
+    }
+    mulNumbers(a, b);
+
+    /**
+    * 
+    * @param {number} Принимает первое число, делимое в функции
+    * @param {number} Принимает второе число, делитель в функции
+    * @returns {number} Вернет число, получившееся в результате деления чисел
+    */
+    function divNumbers(number1, number2) {
+      return console.log(+number1 / +number2);
+    }
+    divNumbers(a, b)
+
+  </script>
+</body>
+
+</html>
